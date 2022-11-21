@@ -1,10 +1,7 @@
-import './globals.css'
+import Navbar from '../components/navbar/navbar';
+import './../styles/globals.css';
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       {/*
@@ -12,7 +9,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <div className="main-content">{children}</div>
+      </body>
     </html>
-  )
+  );
 }

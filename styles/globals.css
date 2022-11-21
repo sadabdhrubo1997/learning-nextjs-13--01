@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply px-32;
+}
+
+.main-content {
+  @apply my-10;
+}
